@@ -1,4 +1,6 @@
 <?php
+header("Content-type:application/pdf");
+header("Content-Disposition:attachment;filename='handwriting.pdf'");
 require 'vendor/autoload.php';
 // reference the Dompdf namespace
 use Dompdf\Dompdf;
