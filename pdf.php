@@ -7,10 +7,12 @@ use Dompdf\Dompdf;
 
 // instantiate and use the dompdf class
 $dompdf = new Dompdf();
-$dompdf->loadHtml('hello world');
+$dompdf->loadHtml($_REQUEST['story']);
 
 // (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A4', 'landscape');
+if !strcmp($_REQUEST['landscape'],"landscape")
+{ $o="landscape";} else {$o="portrait;"}
+$dompdf->setPaper('A4', $o);
 
 // Render the HTML as PDF
 $dompdf->render();
