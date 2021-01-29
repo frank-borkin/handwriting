@@ -7,10 +7,13 @@ use Dompdf\Dompdf;
 
 // instantiate and use the dompdf class
 $dompdf = new Dompdf();
-$dompdf->loadHtml($_REQUEST['story']);
+if (strcmp($_REQUEST['style'],"joined"))
+{ $f="Mv Jadheedh Trace";} else {$f="Learning Curve Dashed";}
+$html="<html>{$_REQUEST['story']}</html>";
+$dompdf->loadHtml($html);
 
 // (Optional) Setup the paper size and orientation
-if (!strcmp($_REQUEST['landscape'],"landscape"))
+if (!strcmp($_REQUEST['orientation'],"landscape"))
 { $o="landscape";} else {$o="portrait";}
 $dompdf->setPaper('A4', $o);
 
