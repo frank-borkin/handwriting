@@ -35,12 +35,48 @@
             background-size: cover;
             background-image: url(img/pencil-918449_1920.jpg);
         }
+        
+        .wrap {
+            max-width: 960px;
+            background: #fff;
+            border-radius: 2px;
+            padding: 66px 115px 59px;
+            position: relative;
+        }
+        
+        input,
+        select {
+            display: block;
+            width: 100%;
+            background: #f2f2f2;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #686868;
+            line-height: 1.2;
+            padding: 0 28px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <p>Enter the text you'd like to use for handwriting practice & hit download!</p>
+        <div class="wrap">
+            <p style="color: #686868;">Enter the text you'd like to use for handwriting practice & hit download!</p>
+            <form>
+                <textarea placeholder="Something they would like to copy...">
+                </textarea>
+                <select name="style">
+                    <option value="joined">Joined-up</option>
+                    <option value="simple">Simple letters</option>
+                </select>
+                <select name="orientation">
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                </select>
+                <input type="submit" value="Download">
+            </form>
+        </div>
     </div>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
