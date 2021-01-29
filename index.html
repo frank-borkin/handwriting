@@ -7,25 +7,41 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <meta name="theme-color" content="#fafafa">
+    <style>
+        body {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            height: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-image: url(img/pencil-918449_1920.jpg);
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- Add your site or application content here -->
-    <p>Enter the text you'd like to use for handwriting practice & hit download!</p>
+    <div class="container">
+        <p>Enter the text you'd like to use for handwriting practice & hit download!</p>
+    </div>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
