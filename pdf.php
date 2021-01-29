@@ -10,8 +10,8 @@ $dompdf = new Dompdf();
 $dompdf->loadHtml($_REQUEST['story']);
 
 // (Optional) Setup the paper size and orientation
-if !strcmp($_REQUEST['landscape'],"landscape")
-{ $o="landscape";} else {$o="portrait;"}
+if (!strcmp($_REQUEST['landscape'],"landscape"))
+{ $o="landscape";} else {$o="portrait";}
 $dompdf->setPaper('A4', $o);
 
 // Render the HTML as PDF
