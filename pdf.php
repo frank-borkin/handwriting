@@ -8,8 +8,8 @@ use Dompdf\Dompdf;
 // instantiate and use the dompdf class
 $dompdf = new Dompdf();
 if (strcmp($_REQUEST['style'],"joined"))
-{ $f="Mv Jadheedh Trace";} else {$f="Learning Curve Dashed";}
-$html="<html>{$_REQUEST['story']}</html>";
+{ $f="Mv Jadheedh Trace"; $n="MvJadheedhTrace-M97e.ttf";} else {$f="Learning Curve Dashed"; $n="LearningCurveDashed-w4DP.ttf";}
+$html="<html><head><style>@font-face { font-family: '{$f}'; src: url('{$n}')  format('truetype');} body {font-family: '{$f}';}</style></head><body>{$_REQUEST['story']}</body></html>";
 $dompdf->loadHtml($html);
 
 // (Optional) Setup the paper size and orientation
