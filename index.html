@@ -81,10 +81,9 @@
 <body>
     <div class="container">
         <div class="wrap">
-            <p style="color: #686868;">Enter the text you'd like to use for handwriting practice & hit download!</p>
+            <p style="color: #686868;">Convert plain text into writing practice</p>
             <form action="/pdf.php" method="POST">
-                <textarea name="story" placeholder="Something they would like to copy...">
-                </textarea>
+                <textarea name="story" placeholder="Something they would like to write..."></textarea>
                 <select name="style">
                     <option value="joined">Joined-up</option>
                     <option value="simple">Simple letters</option>
@@ -93,7 +92,7 @@
                     <option value="portrait">Portrait</option>
                     <option value="landscape">Landscape</option>
                 </select>
-                <input type="submit" value="Download" style="width: 200px; background: -webkit-linear-gradient(right,#2f91ff,#00c513,#2f91ff,#00c513);">
+                <input type="submit" value="Download" style="width: 200px;">
             </form>
         </div>
     </div>
