@@ -10,7 +10,12 @@ $dompdf = new Dompdf();
 
 if (strcmp($_REQUEST['style'],"joined"))
 { $f="Mv Jadheedh Trace"; $n="MvJadheedhTrace-M97e";} else {$f="Learning Curve Dashed"; $n="LearningCurveDashed-w4DP";}
-$html="<html><head><style>@font-face { font-family: '{$f}'; src: url('{$n}.woff')  format('woff'), url('{$n}.ttf')  format('truetype');} body, div {font-family: '{$f}'; font-size: 48pt;}</style></head><body><div>{$_REQUEST['story']}<div></body></html>";
+if (!isset($_REQUEST['size'])) {
+    $size = "48";
+} else {
+    $size = $_REQUEST['size'];
+}
+$html="<html><head><style>@font-face { font-family: '{$f}'; src: url('{$n}.woff')  format('woff'), url('{$n}.ttf')  format('truetype');} body, div {font-family: '{$f}'; font-size: {$size}pt;}</style></head><body><div>{$_REQUEST['story']}<div></body></html>";
 //echo $html;
 
 $dompdf->loadHtml($html);
